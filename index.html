@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="user" value="" />
+		<input type="text" name="" id="postword" value="" />
+		<input type="button" name="" id="but" value="登录" />
+	</body>
+	<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+    	$('#but').click(function(){
+    			$.ajax({
+					type:"post",
+					url:"index.php",
+					data:{
+						user:$('#user').val(),
+						postword:$('#postword').val()
+						
+					},
+					success:function(res){
+						alert(res)
+					}
+				});
+			}
+    	)
+    </script>
+	
+</html>
